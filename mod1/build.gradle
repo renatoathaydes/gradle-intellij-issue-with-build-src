@@ -26,5 +26,9 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.12'
 
     // very ugly, but this is the only way that seems to work in IntelliJ
-    compile rootProject.files('buildSrc/m1/build/libs/m1.jar')
+    //    compile rootProject.files('buildSrc/m1/build/libs/m1.jar')
+
+    // this works with Gradle, but not with IntelliJ, because IntelliJ does not seem
+    // to support a sub-project being included by 2 different projects in the same build
+    compile project(':build-m1')
 }

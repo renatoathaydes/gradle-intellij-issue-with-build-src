@@ -1,2 +1,4 @@
 rootProject.name = 'gradle-intellij-issue-with-build-src'
-include 'mod1'
+include 'mod1', 'build-m1'
+
+project(':build-m1').projectDir = file('buildSrc/m1')

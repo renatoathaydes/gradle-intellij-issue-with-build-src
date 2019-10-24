@@ -2,13 +2,6 @@ plugins {
     id 'groovy'
 }
 
-subprojects {
-    apply plugin: 'groovy'
-    dependencies {
-        compile localGroovy()
-    }
-}
-
 dependencies {
     // this exposes :m2 stuff in the Gradle build files
     runtime project(':m2')
