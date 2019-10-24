@@ -1,0 +1,2 @@
+// simple multi-project build example in buildSrc
+include 'm1', 'm2'

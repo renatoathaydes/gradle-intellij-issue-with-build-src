@@ -1,0 +1,11 @@
+import renato.SuperClass
+
+group 'tests'
+version '1.0-SNAPSHOT'
+
+task exampleTask {
+    doLast {
+        // We want to use buildSrc stuff here...
+        SuperClass.hi()
+    }
+}

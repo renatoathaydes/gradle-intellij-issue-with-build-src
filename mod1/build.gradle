@@ -1,0 +1,30 @@
+import renato.SuperClass
+
+plugins {
+    id 'groovy'
+    id 'application'
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+group 'tests'
+version '1.0-SNAPSHOT'
+mainClassName = 'Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+println ":mod1's build.gradle can see SuperClass!: ${SuperClass}"
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.12'
+
+    // very ugly, but this is the only way that seems to work in IntelliJ
+    compile rootProject.files('buildSrc/m1/build/libs/m1.jar')
+}
